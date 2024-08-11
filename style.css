@@ -1,0 +1,838 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.custom-header {
+  background-color: rgba(255, 255, 255, 0.566) !important;
+  backdrop-filter: blur(10px) !important;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 85%;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
+.navbar-nav a {
+  color: black;
+  text-decoration: none;
+  padding: 6px 15px;
+  border-radius: 25px;
+  transition: background-color 0.15s ease;
+  font-weight: 600;
+}
+
+.navbar-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.orange-button {
+  color: rgb(251, 251, 251) !important;
+  background-color: #ffc73c;
+  text-decoration: none;
+  padding: 6px 15px;
+  border-radius: 25px;
+  transition: background-color 0.15s ease;
+  font-weight: 500;
+}
+
+.orange-button:hover {
+  background-color: #eb8722 !important;
+}
+
+/* Slider */
+.slider {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.slider .list .item {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.slider .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider .list .item::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 20px;
+  bottom: 0;
+
+  background-image: linear-gradient(to top, #00d0ffcc 30%, transparent 50%);
+}
+
+.slider .list .item.active {
+  opacity: 1;
+  z-index: 10;
+}
+
+.campaign {
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  height: 300px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+
+.campaign .campaign-name img {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.campaign .btn-program {
+  width: 100%;
+  max-width: 230px;
+  line-height: 30px;
+  text-align: center;
+  row-gap: 50px;
+  font-weight: bolder;
+  transition: all 0.2s;
+  box-shadow: 0 6px 30px 5px rgba(255, 199, 60, 0.5);
+}
+
+.campaign .btn-program:hover {
+  box-shadow: 0 6px 30px 5px #eb872284;
+}
+
+.thumbnail {
+  position: absolute;
+  bottom: 0;
+  z-index: 12;
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  height: 300px;
+  padding: 0 50px;
+  overflow: auto;
+  justify-content: end;
+}
+
+.thumbnail::-webkit-scrollbar {
+  width: 0;
+}
+
+.thumbnail .item {
+  width: 180px;
+  height: 260px;
+  transition: 0.5s;
+  flex-shrink: 0;
+}
+
+.thumbnail .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.thumbnail .cover-object img {
+  object-position: left !important;
+}
+
+.thumbnail .item.active {
+  box-shadow: 0 0 15px 3px rgb(225, 248, 255);
+  filter: brightness(1.1);
+  border-radius: 15px;
+}
+
+.home-section::after {
+  content: '';
+  display: block;
+  border-bottom: 1px solid white;
+}
+
+/* Section Tentang Program */
+
+.background-program {
+  background-image: linear-gradient(
+      rgba(0, 208, 255, 0.95),
+      rgba(0, 208, 255, 0.95)
+    ),
+    url(assets/images/background\ 4.webp);
+  min-height: 120vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.custom-container-program {
+  width: 100%;
+  height: 100%;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+}
+
+.gambar-program {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-top: 5em;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.gambar-program img {
+  max-height: 556px;
+}
+
+.informasi-program {
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  padding-top: 7em;
+  color: white;
+}
+
+.informasi-program h2 {
+  font-weight: bolder;
+}
+
+.tentang-program-text {
+  max-width: 650px;
+}
+
+.btn-daftar {
+  max-width: 220px;
+  text-align: center;
+  font-weight: bolder;
+  line-height: 2em;
+  margin-bottom: 3.5em;
+  box-shadow: 0 6px 30px 5px rgba(255, 199, 60, 0.5);
+  transition: all 0.2s;
+}
+
+.btn-daftar:hover {
+  box-shadow: 0 6px 30px 5px #eb8722a9;
+}
+
+.mekanisme-informasi-container {
+  margin-top: 1.4em;
+  display: flex;
+  column-gap: 20px;
+}
+
+.mekanisme-informasi-container .dots {
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 10px;
+}
+
+.informasi-container .informasi {
+  line-height: 28px;
+}
+
+.informasi h3 {
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.informasi .tanggal {
+  color: #ffe03c;
+  font-weight: 700;
+}
+
+/* Berita Section */
+.background-berita {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url(assets/images/background-3.png);
+  min-height: 120vh;
+
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.berita-title-section {
+  padding-top: 9em !important;
+  padding-bottom: 3em !important;
+}
+
+.berita-title-section,
+.custom-container-berita {
+  width: 100%;
+  height: 100%;
+  padding: 1em 4em 2em;
+}
+
+.article-section-container {
+  width: 100%;
+
+  max-height: 100vh !important;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2em;
+  margin-bottom: 2em;
+}
+
+.article-section-container img {
+  border-radius: 15px;
+}
+
+.main-article-container {
+  position: relative;
+  height: 500px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.main-article-container::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(to top, #00d0fff5 27%, transparent 35%);
+  border-radius: 15px;
+  z-index: 2;
+}
+
+.main-article-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  position: relative;
+  z-index: 1;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-article-container:hover img {
+  transform: scale(1.1);
+}
+
+.main-article-container:hover h3 {
+  color: #ffe03c;
+}
+
+.main-article-container .content {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  padding: 1.5em;
+  z-index: 3;
+  color: white;
+}
+
+.main-article-container .content h3 {
+  font-weight: 600 !important;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.5em;
+}
+
+.article-list .article-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5em;
+  column-gap: 1em;
+}
+
+.article-list .article-container .article-thumbnail {
+  min-width: 160px;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.article-list .article-container:hover img {
+  transform: scale(1.1);
+}
+.article-list .article-container:hover .article-text h3 {
+  color: #00d0ff;
+}
+
+.article-list .article-container .article-thumbnail img {
+  width: 160px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.article-list .article-container .article-text h3 {
+  font-size: 1.2em;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+}
+
+.article-list .btn-berita {
+  width: 100%;
+
+  padding: 1em 0;
+  border: none;
+  background-color: #00d0fff5;
+  border-radius: 15px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+}
+
+.article-list .btn-berita:hover {
+  background-color: #ffc73c;
+}
+
+/* Registration Page */
+.registration-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration-section .background-registration {
+  background-image: linear-gradient(to bottom, #00d0ffcc 90%, transparent 100%),
+    url(assets/images/background\ 4.webp);
+  min-height: 120vh;
+  width: 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.registration-title-container {
+  margin-top: 7em;
+  color: white;
+}
+
+.registration-title-container h2 {
+  font-weight: 700;
+}
+
+.registration-title-container p {
+  font-weight: 600;
+}
+
+.registration-section .custom-container-registration {
+  max-width: 800px;
+  margin: auto;
+}
+
+.registration-section .custom-container-registration .card {
+  border-radius: 20px;
+  background-color: white;
+  width: 100%;
+}
+
+.registration-section .custom-container-registration .card input,
+.registration-section .custom-container-registration .card textarea {
+  border: none;
+  background-color: #efefef;
+}
+
+.registration-section
+  .custom-container-registration
+  .card
+  .form-check-input:checked {
+  background-color: #00c3ff !important;
+}
+
+.registration-section .custom-container-registration .card .text-muted {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.registration-section
+  .custom-container-registration
+  .card
+  .btn-outline-primary {
+  border: none;
+  background-color: #efefef !important;
+  color: #00c3ff !important;
+  font-size: 2rem;
+}
+
+.registration-section
+  .custom-container-registration
+  .card
+  .btn-outline-primary:hover {
+  background-color: #00c3ff !important;
+  color: white !important;
+}
+
+.registration-section
+  .custom-container-registration
+  .card
+  .form-floating
+  > .form-control {
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.registration-section
+  .custom-container-registration
+  .card
+  .form-floating
+  label {
+  padding-left: 20px;
+  padding-top: 5px;
+  word-wrap: break-word !important;
+  width: 100%;
+}
+
+.registration-section .custom-container-registration .card .text-danger {
+  color: red;
+}
+
+.registration-section .custom-container-registration .card .form-check-label {
+  font-size: 0.85rem;
+}
+
+.registration-section
+  .custom-container-registration
+  .card
+  .form-check-label
+  .text-primary {
+  color: #00c3ff !important;
+}
+
+.registration-section .custom-container-registration .card .btn {
+  background-color: #00c3ff;
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+
+/* Footer Section */
+
+#footer {
+  color: white;
+  background-color: #00c3ff;
+}
+
+.footer-logo img {
+  max-width: 300px;
+  padding-bottom: 2em;
+}
+
+.footer-border-bottom {
+  border-bottom: 1px solid white;
+  padding-bottom: 1.5em;
+}
+
+.footer-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-info {
+  max-width: 60%;
+  line-height: 1.6;
+}
+
+.footer-social-media-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.connect-social-media {
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+.social-media-icons ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.social-media-icons li {
+  display: inline-block;
+}
+
+.social-media-icons img {
+  width: 35px;
+  height: 35px;
+}
+
+.footer-copyright {
+  margin-top: 1.5em;
+  font-size: 0.9em;
+}
+
+@media screen and (max-width: 980px) {
+  .custom-header {
+    transition: none !important;
+    padding: 0 0.5em 0 !important;
+  }
+
+  .custom-header img {
+    height: 18px;
+  }
+
+  .navbar-toggler {
+    background-color: #ffc73c;
+    border-radius: 50%;
+    line-height: 30px;
+    color: #ffc73c !important;
+    border: none !important;
+    width: 44px;
+    height: 44px;
+  }
+
+  .navbar-toggler-icon {
+    font-size: 14px;
+  }
+
+  .custom-header.expanded {
+    border-radius: 15px;
+  }
+
+  .custom-header.expanded .navbar-nav {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .custom-header.expanded .navbar-nav a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .slider .list .item::after {
+    background-image: linear-gradient(to top, #00d0ffbb 30%, transparent 95%);
+  }
+
+  .campaign {
+    top: 3rem;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .campaign .campaign-name img {
+    max-width: 400px;
+  }
+
+  .background-berita {
+    min-height: 180vh !important;
+  }
+
+  .thumbnail {
+    justify-content: center;
+    height: 250px;
+  }
+
+  .thumbnail .item {
+    width: 150px;
+    height: 230px;
+  }
+
+  .background-program {
+    min-height: auto;
+  }
+
+  .custom-container-program {
+    grid-template-columns: 1fr !important;
+  }
+
+  .gambar-program img {
+    max-height: 320px;
+  }
+
+  .informasi-program {
+    margin: 1em 2em 5em;
+    padding-top: 0;
+  }
+
+  .background-berita {
+    min-height: auto;
+  }
+
+  .article-section-container {
+    grid-template-columns: 1fr;
+    row-gap: 2em;
+  }
+
+  .main-article-container {
+    height: 400px;
+    width: auto;
+  }
+
+  .registration-section .custom-container-registration {
+    padding: 1.5em;
+  }
+
+  .registration-section .custom-container-registration .card {
+    padding: 2em 1em;
+  }
+
+  .registration-section .registration-title-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .registration-section .registration-title-container p {
+    font-size: 1rem;
+  }
+
+  .registration-section
+    .custom-container-registration
+    .card
+    .btn-outline-primary {
+    width: 100px;
+    height: 100px;
+    font-size: 1.5rem;
+  }
+
+  .registration-section .custom-container-registration .card input,
+  .registration-section .custom-container-registration .card textarea {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .registration-section .custom-container-registration .card ul li {
+    font-size: 0.8rem;
+  }
+
+  .registration-section
+    .custom-container-registration
+    .card
+    .form-floating
+    label {
+    padding-left: 15px;
+    padding-top: 2px;
+    font-size: 0.85rem;
+  }
+
+  .registration-section .custom-container-registration .card .form-check-label {
+    font-size: 0.8rem;
+  }
+
+  .registration-section .custom-container-registration .card .btn {
+    width: 100%;
+    padding: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .custom-header {
+    margin-top: 2rem !important;
+  }
+  .thumbnail {
+    justify-content: start;
+    height: 180px;
+  }
+
+  .thumbnail .item {
+    width: 120px;
+    height: 160px;
+  }
+
+  .gambar-program img {
+    max-height: 230px;
+  }
+
+  .tentang-program-section h2,
+  h3 {
+    font-size: 1.3em !important;
+  }
+
+  .tentang-program-section p {
+    font-size: 0.9em !important;
+  }
+
+  .mekanisme-informasi-container .dots {
+    row-gap: 1.6em !important;
+  }
+
+  .background-berita {
+    min-height: 120vh !important;
+  }
+
+  .berita-title-section img {
+    width: 230px;
+  }
+
+  .berita-title-section,
+  .custom-container-berita {
+    padding: 3em 2em 1em !important;
+  }
+
+  .main-article-container {
+    height: 270px;
+    width: auto;
+  }
+
+  .article-list .article-container .article-thumbnail img {
+    width: 120px;
+  }
+
+  .article-list .article-container {
+    column-gap: 0 !important;
+  }
+
+  .custom-container-berita .article-section-container h3,
+  p,
+  small {
+    font-size: smaller !important;
+  }
+
+  .custom-container-berita .article-section-container h3 {
+    font-size: 1rem;
+  }
+
+  .article-list .btn-berita {
+    padding: 0.3em 0.5em !important;
+    margin-bottom: 3em;
+  }
+
+  .footer-info-container {
+    flex-direction: column !important;
+  }
+
+  .footer-info,
+  .footer-copyright {
+    max-width: 100%;
+    text-align: center;
+  }
+}

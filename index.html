@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Detik Travel: Explore Thailand</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Fonts Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-light">
+    <header class="custom-header rounded-pill mt-5 p-2 bg-light mx-auto">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a href="index.html">
+            <img
+              src="assets/images/detik-travel.png"
+              alt="Detik Travel"
+              height="25px"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            onclick="toggleNavbar()"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto d-flex gap-5">
+              <a href="#home">Home</a>
+              <a href="#tentangProgram">Tentang Program</a>
+              <a href="#berita">Berita</a>
+              <a class="orange-button" href="registration.html">Registrasi</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="home-section">
+        <div class="custom-container">
+          <div class="slider">
+            <div class="list">
+              <div class="item active">
+                <img src="assets/images/background 1.png" alt="Image 1" />
+              </div>
+              <div class="item">
+                <img src="assets/images/background 2.png" alt="Image 2" />
+              </div>
+              <div class="item">
+                <img src="assets/images/background-3.png" alt="Image 3" />
+              </div>
+            </div>
+
+            <div class="campaign">
+              <div class="campaign-name">
+                <picture>
+                  <source
+                    media="(max-width: 980px)"
+                    srcset="assets/images/asset-footer.png"
+                  />
+                  <source
+                    media="(min-width: 981px)"
+                    srcset="assets/images/asset-home.png"
+                  />
+                  <img
+                    src="assets/images/asset-home.png"
+                    alt="Campaign Image"
+                  />
+                </picture>
+              </div>
+              <a href="#tentangProgram" class="btn-program orange-button"
+                >TENTANG PROGRAM</a
+              >
+            </div>
+
+            <!-- thumbnail -->
+            <div class="thumbnail">
+              <div class="item active">
+                <img src="assets/images/background 1.png" alt="Image 1" />
+              </div>
+              <div class="item cover-object">
+                <img src="assets/images/background 2.png" alt="Image 2" />
+              </div>
+              <div class="item">
+                <img src="assets/images/background-3.png" alt="Image 3" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tentangProgram" class="tentang-program-section">
+        <div class="background-program">
+          <div class="custom-container-program">
+            <div class="gambar-program">
+              <img src="assets/images/about-image 1.png" alt="" />
+            </div>
+            <div class="informasi-program">
+              <div class="tentang-program-text">
+                <h2>Tentang Program</h2>
+                <p>
+                  Bergabunglah dalam "Explore Thailand bersama Detiktravel"!
+                  Kompetisi ini terbuka bagi pembaca Detiktravel yang ingin
+                  menikmati perjalanan ke Thailand. Kunjungi destinasi
+                  menakjubkan seperti pantai Pak Bia Island dan destinasi lain
+                  di Phuket, Thailand. Jadi bagian dari perjalanan kami dan
+                  menangkan hadiah jalan-jalan yang tak terlupakan!
+                </p>
+              </div>
+              <a href="#" class="btn-daftar orange-button">DAFTAR SEKARANG</a>
+
+              <div class="mekanisme-container">
+                <h2>Mekanisme</h2>
+                <div class="mekanisme-informasi-container">
+                  <div class="dots">
+                    <img src="assets/images/dot-circle-dash-line.png" />
+                    <img src="assets/images/dot-circle-dash-line.png" />
+                    <img src="assets/images/dot-circle.png" />
+                  </div>
+                  <div class="informasi-container">
+                    <div class="informasi">
+                      <h3>Isi Formulir</h3>
+                      <p class="tanggal">1 - 31 Mei 2023</p>
+                      <p class="informasi-teks">
+                        Lengkapi formulir pendaftaran dengan data sebenarnya
+                      </p>
+                    </div>
+                    <div class="informasi">
+                      <h3>Penjurian</h3>
+                      <p class="tanggal">1 - 7 Juni 2023</p>
+                      <p class="informasi-teks">
+                        Ikuti rangkaian penjurian online/offline
+                      </p>
+                    </div>
+                    <div class="informasi">
+                      <h3>Pengumuman Pemenang</h3>
+                      <p class="tanggal">11 Juni 2023</p>
+                      <p class="informasi-teks">
+                        Ikuti rangkaian penjurian online/offline
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="berita">
+        <div class="background-berita">
+          <div class="berita-title-section">
+            <img src="assets/images/detik-travel-update.png" />
+          </div>
+          <div class="custom-container-berita">
+            <div class="article-section-container">
+              <div class="main-article-container">
+                <img src="assets/images/artikel-1.png" alt="Artikel Doraemon" />
+                <div class="content">
+                  <h3>
+                    Warga Thailand Pakai Boneka Doraemon untuk Ritual Pemanggil
+                    Hujan
+                  </h3>
+                  <p class="latest-upload">3 jam yang lalu</p>
+                </div>
+              </div>
+
+              <div class="article-list">
+                <div class="article-container">
+                  <div class="article-thumbnail">
+                    <img src="assets/images/artikel-2.png" alt="Artikel 2" />
+                  </div>
+                  <div class="article-text">
+                    <h3>
+                      Thailand Ngarep Cuan Banyak dari Turis China dan Jepang
+                    </h3>
+                    <small class="latest-upload">1 jam yang lalu</small>
+                  </div>
+                </div>
+                <div class="article-container">
+                  <div class="article-thumbnail">
+                    <img src="assets/images/artikel-3.png" alt="Artikel 2" />
+                  </div>
+                  <div class="article-text">
+                    <h3>
+                      Cahaya Lampu Hiasi Kuil Wat Phra Dhammakaya Thailand Saat
+                      Waisak
+                    </h3>
+                    <small class="latest-upload">1 jam yang lalu</small>
+                  </div>
+                </div>
+                <div class="article-container">
+                  <div class="article-thumbnail">
+                    <img src="assets/images/artikel-4.png" alt="Artikel 2" />
+                  </div>
+                  <div class="article-text">
+                    <h3>
+                      Cantiknya Lisa BLACKPINK Berwisata Sejarah di Thailand
+                    </h3>
+                    <small class="latest-upload">1 jam yang lalu</small>
+                  </div>
+                </div>
+                <button class="btn-berita">
+                  Lihat Berita Lainnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 20 20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer">
+        <div class="footer-container px-5 py-5">
+          <div class="footer-logo">
+            <img src="assets/images/asset-footer.png" alt="logo detik travel" />
+          </div>
+          <div class="footer-border-bottom">
+            <div class="footer-info-container">
+              <div class="footer-info">
+                Bergabunglah dalam "Explore Thailand bersama Detiktravel"!
+                Kompetisi ini terbuka bagi pembaca Detiktravel yang ingin
+                menikmati perjalanan ke Thailand. Kunjungi destinasi menakjubkan
+                seperti pantai Pak Bia Island dan destinasi lain di Phuket,
+                Thailand. Jadi bagian dari perjalanan kami dan menangkan hadiah
+                jalan-jalan yang tak terlupakan!
+              </div>
+              <div class="footer-social-media-container">
+                <div class="connect-social-media">Connect With Us</div>
+                <div class="social-media-icons">
+                  <ul>
+                    <li>
+                      <img
+                        src="assets/images/facebook.png"
+                        alt="facebook logo"
+                      />
+                    </li>
+                    <li>
+                      <img src="assets/images/twitter.png" alt="x logo" />
+                    </li>
+                    <li>
+                      <img
+                        src="assets/images/instagram.png"
+                        alt="instagram logo"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="assets/images/linkedin.png"
+                        alt="linkedin logo"
+                      />
+                    </li>
+                    <li>
+                      <img src="assets/images/youtube.png" alt="youtube logo" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            Copyright &copy; 2023 detikcom. All right reserved.
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Bootstrap script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
